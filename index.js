@@ -1,20 +1,27 @@
-import { Header, Nav, Main, Footer } from "./components";
+import {
+  Header,
+  Nav,
+  Main,
+  Footer
+} from "./components";
 import * as state from "./store";
 import Navigo from "navigo";
-import { capitalize } from "lodash";
+import {
+  capitalize
+} from "lodash";
 
 const router = new Navigo(window.location.origin);
-router.updatePageLinks();
 
 function render(st = state.Home) {
+  console.log(st);
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Nav(state.Links)}
   ${Main(st)}
   ${Footer()}
 `;
+  router.updatePageLinks();
 }
-render(state.Home);
 
 router
   .on({
@@ -22,6 +29,8 @@ router
       render(state.Home);
     },
     ":page": (params) => {
+      console.log(capitalize(params.page));
+      console.log(params.page);
       render(state[capitalize(params.page)]);
     },
   })
@@ -39,8 +48,29 @@ router
 */
 
 // add menu toggle to bars icon in nav bar
-document
+/*document
   .querySelector(".fa-bars")
   .addEventListener("click", () =>
     document.querySelector("nav > ul").classList.toggle("hidden--mobile")
-  );
+  );*/
+
+// Accordion Dropdown//
+
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}

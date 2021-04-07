@@ -1,4 +1,4 @@
 export default {
   header: "ShoppingCart",
-  page: "ShoppingCart",
+  page: "Shoppingcart",
 };

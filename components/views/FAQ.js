@@ -10,9 +10,9 @@ export default () => `
   Unfortunately there are times when we are out of stock in an item even though your order went through. This happens mostly during sale season when our sale volumes are higher than normal. We cannot know if your items are in stock until your order is processed. At that time you will receive an email letting you know what is in stock and is on its way.                        </p>
 </div>
 
-<button class="accordion">Section 2</button>
+<button class="accordion"> Is it safe to use my card online at klazzykidzfashion.com?             </button>
 <div class="panel">
-   <h1> Is it safe to use my card online at klazzykidzfashion.com? </h1>
+
 
   <p>  The online store at www.klazzykidzfashion.com is designed to give you control over the privacy of your credit card information, name, address, e-mail and any other information you provide us. We offer the industry standard security measures available through your browser called SSL (secure socket layer) encryption that ensures safe Internet transmission of your personal information. When you place an order for merchandise on the Ladida site, you will be asked for certain personal information such as your name, address, email address and your credit card information required to process the order. The secure processing of credit card transactions is done by a proprietary authentication system.
 
@@ -27,8 +27,7 @@ export default () => `
 </div>
 
 
-<button class="accordion">Section 3</button>
-<div class="panel">
+
 
  <h1> How much does shipping cost? </h1>
 

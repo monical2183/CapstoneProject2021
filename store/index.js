@@ -1,7 +1,7 @@
-export { default as AboutMe } from "./AboutMe";
+export { default as Aboutme } from "./Aboutme";
 export { default as Form } from "./Form";
-export { default as FAQ } from "./FAQ";
+export { default as Faq } from "./Faq";
 export { default as Home } from "./Home";
 export { default as Links } from "./Links";
-export { default as ShopByCategory } from "./ShopByCategory";
-export { default as ShoppingCart } from "./ShoppingCart";
+export { default as Shopbycategory } from "./Shopbycategory";
+export { default as Shoppingcart } from "./Shoppingcart";
