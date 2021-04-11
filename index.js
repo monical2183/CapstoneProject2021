@@ -13,7 +13,7 @@ import {
 const router = new Navigo(window.location.origin);
 
 function render(st = state.Home) {
-  console.log(st);
+  console.log(showDate);
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Nav(state.Links)}
@@ -73,4 +73,16 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
+
+  /* Shop By Category Functions*/
 }
+document.getElementById("myBtn").addEventListener("click", function () {
+  myFunction(p1, p2);
+});
+
+document.getElementById("add").addEventListener("click", showDate);
+
+function showDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+console.log(showDate);
