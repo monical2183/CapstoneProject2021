@@ -5,15 +5,15 @@ import {
   Footer
 } from "./components";
 import * as state from "./store";
-import Navigo from "navigo";
+import Navigo from "Navigo";
 import {
-  capitalize
+  capitalize,
+  lte
 } from "lodash";
 
 const router = new Navigo(window.location.origin);
 
 function render(st = state.Home) {
-  console.log(showDate);
   document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Nav(state.Links)}
@@ -21,6 +21,7 @@ function render(st = state.Home) {
   ${Footer()}
 `;
   router.updatePageLinks();
+  myEventListeners();
 }
 
 router
@@ -35,8 +36,8 @@ router
     },
   })
   .resolve();
-/*
-router
+
+/*router
   .on({
     "/": () => render(state.Home),
     ":page": (params) => {
@@ -44,20 +45,18 @@ router
       render(state[page]);
     },
   })
-  .resolve();
-*/
+  .resolve();*/
 
 // add menu toggle to bars icon in nav bar
-/*document
+document
   .querySelector(".fa-bars")
   .addEventListener("click", () =>
     document.querySelector("nav > ul").classList.toggle("hidden--mobile")
-  );*/
+  );
 
-// Accordion Dropdown//
-
-let acc = document.getElementsByClassName("accordion");
-let i;
+// Accordion Dropdown Menu for FAQ Page//
+const acc = document.getElementsByClassName("accordion");
+const i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
@@ -66,23 +65,22 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active");
 
     /* Toggle between hiding and showing the active panel */
-    let panel = this.nextElementSibling;
+    const panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
     }
   });
-
-  /* Shop By Category Functions*/
 }
-document.getElementById("myBtn").addEventListener("click", function () {
-  myFunction(p1, p2);
-});
 
-document.getElementById("add").addEventListener("click", showDate);
+/* Shop By Category Functions*/
+function myEventListeners() {
+  document.getElementById("add").addEventListener("click", showDate);
+}
 
 function showDate() {
-  document.getElementById("demo").innerHTML = Date();
+  document.getElementById("demo").innerHTML = prompt(
+    "did you want to add to cart?"
+  );
 }
-console.log(showDate);
