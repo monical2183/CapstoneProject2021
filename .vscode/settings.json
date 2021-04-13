@@ -27,10 +27,14 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.view.alwaysShowHeaderActions": true,
   "prettier.insertPragma": true,
-  "prettier.requireConfig": true,
   "prettier.eslintIntegration": true,
   "prettier.parser": "babel",
   "prettier.stylelintIntegration": true,
   "prettier.tslintIntegration": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "prettier.enableDebugLogs": true,
+  "prettier.ignorePath": "",
+  "prettier.useTabs": true,
+  "prettier.withNodeModules": true,
+  "editor.defaultFormatter": "svipas.prettier-plus"
 }
