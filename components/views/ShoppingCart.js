@@ -74,10 +74,10 @@ export default () => `
           <b>4</b>
         </span>
       </h4>
-      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <p><a href="#">Boys Flower Short Set</a> <span class="price">$15</span></p>
+      <p><a href="#">Girl Stripped Leggings Set </a> <span class="price">$15</span></p>
+      <p><a href="#">Boys short set</a> <span class="price">$15</span></p>
+      <p><a href="#">Denim Girls Bibs</a> <span class="price">$15</span></p>
       <hr>
       <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
     </div>

@@ -25,5 +25,5 @@ Any personal information you provide to us on our website when you register or u
  <button class="accordion"> How much does shipping cost? </button>
  <div class="panel">
 
-<p> We offer FREE shipping to most of the United States for orders over $50.00 and FREE shipping on international orders over $100.00. Orders within the following local zip codes, 08701, 08755, 08527, have an option of free in store pickup or a flat rate shipping fee of $6. Orders within the United states that are less than $50.00 will be charged a flat rate fee of $6.00 and international orders less than $100.00 will be charged a flat rate fee of $10.00. Overnight shipping in the US is a fee of $20.00 and Two-Day Shipping in the US is a fee of $25.00. </p>
+<p> We offer FREE shipping to most of the United States for orders over $50.00 and FREE shipping on international orders over $100.00. Orders within the United states that are less than $50.00 will be charged a flat rate fee of $6.00 and international orders less than $100.00 will be charged a flat rate fee of $10.00. Overnight shipping in the US is a fee of $20.00 and Two-Day Shipping in the US is a fee of $25.00. </p>
 </div>`;

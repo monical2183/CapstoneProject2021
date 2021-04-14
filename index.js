@@ -20,6 +20,7 @@ function render(st = state.Home) {
   ${Footer()}
 `;
   router.updatePageLinks();
+  myEventListeners();
 }
 router
   .on({
@@ -43,24 +44,27 @@ router
   })
   .resolve();*/
 // add menu toggle to bars icon in nav bar
-document
-  .querySelector(".fa-bars")
-  .addEventListener("click", () =>
-    document.querySelector("nav > ul").classList.toggle("hidden--mobile")
-  );
+
 // Accordion Dropdown Menu for FAQ Page//
-const acc = document.getElementsByClassName("accordion");
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    /* Toggle between adding and removing the "active" class,
+function myEventListeners() {
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
-    this.classList.toggle("active");
-    /* Toggle between hiding and showing the active panel */
-    const panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
+      this.classList.toggle("active");
+      /* Toggle between hiding and showing the active panel */
+      const panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  document
+    .querySelector(".fa-bars")
+    .addEventListener("click", () =>
+      document.querySelector("nav > ul").classList.toggle("hidden--mobile")
+    );
 }
